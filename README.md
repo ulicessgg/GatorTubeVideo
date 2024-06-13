@@ -10,9 +10,9 @@ Please follow the instructions below and fill in the information requested when 
 
 |               | Information   |
 |:-------------:|:-------------:|
-| Student Name  | name-here     |
-| Student ID    | id-here       |
-| Student Email | email-here    |
+| Student Name  | Ulices Gonzalez     |
+| Student ID    | 923328897       |
+| Student Email | sgonzalez30@sfsu.edu    |
 
 
 
