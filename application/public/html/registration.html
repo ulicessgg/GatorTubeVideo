@@ -25,25 +25,25 @@
         </header>
         <form action="app.php">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="user@email.ext" />
+            <input type="email" name="email" id="email" placeholder="user@email.ext" required /><br>
 
             <label for="username">Username:</label>
-            <input type="text" name="username" id="username" placeholder="Username" />
+            <input type="text" name="username" id="username" placeholder="Username" required /><br>
 
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" placeholder="Password" />
+            <input type="password" name="password" id="password" placeholder="Password" required /><br>
 
             <label for="confirm_password">Confirm Password:</label>
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Password" />
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Password" required /><br>
 
-            <button type="submit">Register</button>
-            <button type="reset">Clear Form</button>
-
-            <input type="checkbox" name="confirm_age" id="confirm_age" />
+            <input type="checkbox" name="confirm_age" id="confirm_age" required />
             <label for="confirm_age">I confirm I am 13+ years of age</label>
 
-            <input type="checkbox" name="tos" id="tos" />
-            <label for="tos">I agree to the <a href="#">Terms of Service</a></label>
+            <input type="checkbox" name="tos" id="tos" required />
+            <label for="tos">I agree to the <a href="#">Terms of Service</a></label><br>
+
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
         </form>
     </main>
     <footer>
