@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Post Video</title>
+    </head>
+    <body>
+        <header>
+            <h1>CSC 317 Youtube Clone</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="registration.html">Register</a></li>
+                    <li><a href="postvideo.html">Post</a></li>
+                    <li><a href="viewpost.html">View Post</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+    <main>
+        <header>
+            <h2>Post</h2>
+        </header>
+        <form action="upload.php">
+            <label for="title">Post Title:</label>
+            <input type="text" name="title" id="title" placeholder="Title" required /><br>
+
+            <label for="description">Post Description:</label>
+            <input type="text" name="description" id="description" placeholder="Description" required /><br>
+
+            <label for="video">Upload Video:</label>
+            <input type="file" name="video" id="video" accept="video/*" required /><br>
+
+            <input type="checkbox" name="aup" id="aup" required />
+            <label for="aup">I accept to the <a href="#">Acceptable Use Policy</a></label><br>
+        
+            <button type="submit">Post</button>
+            <button type="reset">Clear</button>
+        </form>
+    </main>
+    <footer>
+        Ulices Gonzalez &copy; 2024
+    </footer>
+</html>
+
