@@ -3,26 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Sergio Ulices Gonzalez Guerrero"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <title>Login</title>
     </head>
-    <body>
+    <body id="login-id">
         <header>
             <h1>CSC 317 Youtube Clone</h1>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="registration.html">Register</a></li>
-                    <li><a href="postvideo.html">Post</a></li>
-                    <li><a href="viewpost.html">View Post</a></li>
+                <ul class="main-nav">
+                    <li><a href="index.html" class="home">Home</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                    <li><a href="registration.html" class="register">Register</a></li>
+                    <li><a href="postvideo.html" class="post">Post</a></li>
+                    <li><a href="viewpost.html" class="view">View Post</a></li>
                 </ul>
             </nav>
         </header>
     </body>
     <main>
-        <header>
-            <h2>Log In</h2>
-        </header>
+        <h2>Log In</h2>
         <form action="app.php">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" placeholder="Username" /><br>

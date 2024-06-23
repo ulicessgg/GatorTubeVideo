@@ -3,35 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Sergio Ulices Gonzalez Guerrero"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <title>View Post</title>
     </head>
-    <body>
+    <body id="view-id">
         <header>
             <h1>CSC 317 Youtube Clone</h1>
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="registration.html">Register</a></li>
-                    <li><a href="postvideo.html">Post</a></li>
-                    <li><a href="viewpost.html">View Post</a></li>
+                <ul class="main-nav">
+                    <li><a href="index.html" class="home">Home</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                    <li><a href="registration.html" class="register">Register</a></li>
+                    <li><a href="postvideo.html" class="post">Post</a></li>
+                    <li><a href="viewpost.html" class="view">View Post</a></li>
                 </ul>
             </nav>
         </header>
     </body>
     <main>
-        <header>
-            <h2>View Post</h2>
-        </header>
+        <h2>View Post</h2>
         <article>
+            <video id="video" width="960" height="540" controls>
+                <source src="../12599348-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
             <h3 id="title">Title</h3>
             <p id="author">Posted by</p>
             <p id="creation-time">Posted at</p>
-            <video id="video" controls>
-                <source src="#" type="mp4">
-            </video>
             <section id="comments">
-                <h4>Comments</h4>
+                <h3>Comments</h3>
+                <h4>Username </h4>
+                <p>Insert User Comments here</p>
             </section>
         </article>
     </main>
