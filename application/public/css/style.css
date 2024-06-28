@@ -16,11 +16,14 @@
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  background-color: rgba(0, 0, 0, 0.75);
+  display: inline-flex;
+  flex-direction: row;
+  -ms-flex-align: center;
 }
 
 body {
-  background: linear-gradient(rgba(35, 17, 97, 0.625), rgba(35, 17, 97, 0.625)), url(../architecture-1868265_1920.jpg) no-repeat center center/cover;
+  background: linear-gradient(rgba(35, 17, 97, 0.625), rgba(35, 17, 97, 0.625));
   background-position: auto;
   height: 100%;
   width: 100%;
@@ -51,6 +54,7 @@ main {
 }
 
 .main-nav li {
+  align-items: center;
   font-size: 36pt;
   display: inline-block;
   margin: .36em;
@@ -64,6 +68,15 @@ main {
 a:hover {
   color: #E9D597;
 }
+
+.video-previews {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 
 img {
   border-color: #C99700;
@@ -97,12 +110,10 @@ h5, p, input {
 
 h1 {
   color: #C99700;
-  font-size: 128px;
+  font-size: 60px;
   align-content: center;
-  margin-bottom: 16px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 64px;
 }
 
 a {
@@ -123,7 +134,7 @@ h2 {
   margin-bottom: 32px;
   margin-left: 128px;
   margin-right: 32px;
-  margin-top: 32px;
+  margin-top: 48px;
   -webkit-text-stroke: 1px #C99700;
 }
 
@@ -149,15 +160,22 @@ h4 {
   margin-top: 32px;
 }
 
+.login-form {
+  align-items: center;
+}
+
+.registration-form {
+  align-items: center;
+}
+
 form {
-  display: list-item;
-  justify-content: space-evenly;
+  display: inline-block;
   position: left;
 }
 
 label {
   color: #C99700;
-  font-size: 30px;
+  font-size: 48px;
   text-decoration: solid;
   text-align: left;
   margin-bottom: 32x;
@@ -168,7 +186,8 @@ label {
 
 input {
   color: #C99700;
-  font-size: 30px;
+  font-size: 36px;
+  inpu
   text-decoration: solid;
   text-align: center;
   margin-bottom: 128x;
@@ -179,7 +198,7 @@ input {
 
 button {
   color: #463077;
-  font-size: 30px;
+  font-size: 36px;
   text-decoration: solid;
   text-align: center;
   margin-bottom: 32x;
