@@ -1,19 +1,23 @@
 @charset "utf-8";
 
+
 /* CSS Document */
 * {
   text-align: center;
 }
+
 
 @font-face {
   font-family: mainFont;
   src: url(../Jaro-Regular-VariableFont_opsz.ttf);
 }
 
+
 @font-face {
   font-family: outFont;
   src: url(../ChivoMono-VariableFont_wght.ttf);
 }
+
 
 header {
   background-color: rgba(0, 0, 0, 0.75);
@@ -21,6 +25,7 @@ header {
   flex-direction: row;
   -ms-flex-align: center;
 }
+
 
 body {
   background: linear-gradient(rgba(35, 17, 97, 0.625), rgba(35, 17, 97, 0.625));
@@ -31,27 +36,31 @@ body {
   background-blend-mode: normal;
 }
 
+
 main {
   background: linear-gradient(rgba(0, 0, 0, 0.625), rgba(0, 0, 0, 0.625));
 }
 
-#home-id .home, 
-#login-id .login, 
-#register-id .register, 
+
+#home-id .home,
+#login-id .login,
+#register-id .register,
 #post-id .post,
 #view-id .view {
   font-size: 48pt;
   color: #933311;
 }
 
-.home:hover, 
-.login:hover, 
-.register:hover, 
+
+.home:hover,
+.login:hover,
+.register:hover,
 .post:hover,
 .view:hover {
   font-size: 48pt;
   color: #E9D597;
 }
+
 
 .main-nav li {
   align-items: center;
@@ -60,14 +69,17 @@ main {
   margin: .36em;
 }
 
+
 .main-nav a {
   text-shadow: 0 0 0;
   color: #C99700;
 }
 
+
 a:hover {
   color: #E9D597;
 }
+
 
 .video-previews {
   align-items: center;
@@ -76,6 +88,8 @@ a:hover {
   flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
 }
+
+
 
 
 img {
@@ -89,8 +103,9 @@ img {
   margin-top: 32px;
 }
 
+
 video {
-  color: #C99700; 
+  color: #C99700;
   border-color: #C99700;
   border: thick;
   border-style: solid;
@@ -100,13 +115,16 @@ video {
   margin-top: 32px;
 }
 
+
 h1, h2, h3, h4, a, label, footer {
   font-family: mainFont;
 }
 
+
 h5, p, input {
   font-family: outFont;
 }
+
 
 h1 {
   color: #C99700;
@@ -115,6 +133,7 @@ h1 {
   margin-left: 32px;
   margin-right: 32px;
 }
+
 
 a {
   color: #C99700;
@@ -125,6 +144,7 @@ a {
   margin-right: 16px;
   margin-top: 32px;
 }
+
 
 h2 {
   color: #E9D597;
@@ -138,6 +158,7 @@ h2 {
   -webkit-text-stroke: 1px #C99700;
 }
 
+
 h3 {
   color: #E9D597;
   font-size: 48px;
@@ -150,6 +171,7 @@ h3 {
   -webkit-text-stroke: 1px #C99700;
 }
 
+
 h4 {
   color: #E9D597;
   font-size: 36px;
@@ -160,18 +182,22 @@ h4 {
   margin-top: 32px;
 }
 
+
 .login-form {
   align-items: center;
 }
+
 
 .registration-form {
   align-items: center;
 }
 
+
 form {
   display: inline-block;
   position: left;
 }
+
 
 label {
   color: #C99700;
@@ -183,6 +209,7 @@ label {
   margin-right: 32px;
   margin-top: 32px;
 }
+
 
 input {
   color: #C99700;
@@ -196,6 +223,7 @@ input {
   margin-top: 32px;
 }
 
+
 button {
   color: #463077;
   font-size: 36px;
@@ -207,6 +235,7 @@ button {
   margin-top: 32px;
 }
 
+
 p {
   color: #E9D597;
   font-size: 24px;
@@ -217,6 +246,7 @@ p {
   margin-right: 32px;
   margin-top: 32px;
 }
+
 
 footer {
   color: #C99700;
