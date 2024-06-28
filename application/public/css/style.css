@@ -50,28 +50,10 @@ main {
 
 
 .main-nav li {
-<<<<<<< HEAD
-  align-items: center;
-  font-size: 36pt;
-  display: inline-block;
-  margin: .36em;
-}
-
-
-.main-nav a {
-  text-shadow: 0 0 0;
-  color: #C99700;
-}
-
-
-a:hover {
-  color: #E9D597;
-=======
   color: #C99700;
   font-size: 36pt;
   display: inline-block;
   margin: 6px;
->>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
 }
 
 
@@ -124,11 +106,8 @@ h1 {
   color: #C99700;
   font-size: 60px;
   align-content: center;
-<<<<<<< HEAD
-=======
   margin-top: 64px;
   margin-bottom: 16px;
->>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
   margin-left: 32px;
   margin-right: 32px;
 }
@@ -153,10 +132,6 @@ h2 {
   margin-bottom: 0px;
   margin-left: 128px;
   margin-right: 32px;
-<<<<<<< HEAD
-  margin-top: 48px;
-=======
->>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
   -webkit-text-stroke: 1px #C99700;
 }
 
@@ -196,17 +171,12 @@ h4 {
 
 
 form {
-<<<<<<< HEAD
-  display: inline-block;
-  position: left;
-=======
   display: flex;
   text-align: center;
   flex-direction: column;
   margin-left: 32px;
   margin-right: 32px;
   width: 720px;
->>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
 }
 
 
