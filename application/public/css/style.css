@@ -51,18 +51,10 @@ main {
 }
 
 .main-nav li {
+  color: #C99700;
   font-size: 36pt;
   display: inline-block;
-  margin: .36em;
-}
-
-.main-nav a {
-  text-shadow: 0 0 0;
-  color: #C99700;
-}
-
-a:hover {
-  color: #E9D597;
+  margin: 6px;
 }
 
 img {
@@ -70,10 +62,10 @@ img {
   border: thick;
   border-style: solid;
   border-width: 8px;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 video {
@@ -81,10 +73,10 @@ video {
   border-color: #C99700;
   border: thick;
   border-style: solid;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 h1, h2, h3, h4, a, label, footer {
@@ -99,31 +91,30 @@ h1 {
   color: #C99700;
   font-size: 128px;
   align-content: center;
+  margin-top: 64px;
   margin-bottom: 16px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 64px;
 }
 
 a {
   color: #C99700;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 32px;
-  margin-left: 16px;
-  margin-right: 16px;
   margin-top: 32px;
+  margin-bottom: 32px;
+  margin-right: 16px;
 }
 
 h2 {
   color: #E9D597;
   font-size: 60px;
   text-align: left;
-  text-decoration: underline;
-  margin-bottom: 32px;
+  text-decoration: none;
+  margin-top: 32px;
+  margin-bottom: 0px;
   margin-left: 128px;
   margin-right: 32px;
-  margin-top: 32px;
   -webkit-text-stroke: 1px #C99700;
 }
 
@@ -132,10 +123,10 @@ h3 {
   font-size: 48px;
   text-decoration: underline;
   text-align: center;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
   -webkit-text-stroke: 1px #C99700;
 }
 
@@ -143,16 +134,19 @@ h4 {
   color: #E9D597;
   font-size: 36px;
   text-align: left;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 form {
-  display: list-item;
-  justify-content: space-evenly;
-  position: left;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 32px;
+  margin-right: 32px;
+  width: 720px;
 }
 
 label {
@@ -160,21 +154,21 @@ label {
   font-size: 30px;
   text-decoration: solid;
   text-align: left;
+  margin-top: 32px;
   margin-bottom: 32x;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 input {
   color: #C99700;
   font-size: 30px;
   text-decoration: solid;
-  text-align: center;
-  margin-bottom: 128x;
-  margin-left: 32px;
-  margin-right: 32px;
+  text-align: left;
   margin-top: 32px;
+  margin-bottom: 132x;
+  margin-left: 32px;
+  margin-right: 0px;
 }
 
 button {
@@ -182,10 +176,10 @@ button {
   font-size: 30px;
   text-decoration: solid;
   text-align: center;
+  margin-top: 32px;
   margin-bottom: 32x;
   margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 32px;
+  margin-right: 0px;
 }
 
 p {
@@ -193,17 +187,17 @@ p {
   font-size: 24px;
   text-decoration: none;
   text-align: left;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 footer {
   color: #C99700;
   font-size: 24px;
+  margin-top: 32px;
   margin-bottom: 16px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 16px;
 }
