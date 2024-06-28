@@ -50,6 +50,7 @@ main {
 
 
 .main-nav li {
+<<<<<<< HEAD
   align-items: center;
   font-size: 36pt;
   display: inline-block;
@@ -65,6 +66,12 @@ main {
 
 a:hover {
   color: #E9D597;
+=======
+  color: #C99700;
+  font-size: 36pt;
+  display: inline-block;
+  margin: 6px;
+>>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
 }
 
 
@@ -84,10 +91,10 @@ img {
   border: thick;
   border-style: solid;
   border-width: 8px;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 
@@ -96,10 +103,10 @@ video {
   border-color: #C99700;
   border: thick;
   border-style: solid;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 
@@ -117,6 +124,11 @@ h1 {
   color: #C99700;
   font-size: 60px;
   align-content: center;
+<<<<<<< HEAD
+=======
+  margin-top: 64px;
+  margin-bottom: 16px;
+>>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
   margin-left: 32px;
   margin-right: 32px;
 }
@@ -126,10 +138,9 @@ a {
   color: #C99700;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 32px;
-  margin-left: 16px;
-  margin-right: 16px;
   margin-top: 32px;
+  margin-bottom: 32px;
+  margin-right: 16px;
 }
 
 
@@ -137,11 +148,15 @@ h2 {
   color: #E9D597;
   font-size: 60px;
   text-align: left;
-  text-decoration: underline;
-  margin-bottom: 32px;
+  text-decoration: none;
+  margin-top: 32px;
+  margin-bottom: 0px;
   margin-left: 128px;
   margin-right: 32px;
+<<<<<<< HEAD
   margin-top: 48px;
+=======
+>>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
   -webkit-text-stroke: 1px #C99700;
 }
 
@@ -151,10 +166,10 @@ h3 {
   font-size: 48px;
   text-decoration: underline;
   text-align: center;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
   -webkit-text-stroke: 1px #C99700;
 }
 
@@ -163,10 +178,10 @@ h4 {
   color: #E9D597;
   font-size: 36px;
   text-align: left;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 
@@ -181,8 +196,17 @@ h4 {
 
 
 form {
+<<<<<<< HEAD
   display: inline-block;
   position: left;
+=======
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 32px;
+  margin-right: 32px;
+  width: 720px;
+>>>>>>> 61e0e69c7abb0582b68fc02bc1e771ea39804376
 }
 
 
@@ -191,10 +215,10 @@ label {
   font-size: 48px;
   text-decoration: solid;
   text-align: left;
+  margin-top: 32px;
   margin-bottom: 32x;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 
@@ -203,11 +227,11 @@ input {
   font-size: 36px;
   inpu
   text-decoration: solid;
-  text-align: center;
-  margin-bottom: 128x;
-  margin-left: 32px;
-  margin-right: 32px;
+  text-align: left;
   margin-top: 32px;
+  margin-bottom: 132x;
+  margin-left: 32px;
+  margin-right: 0px;
 }
 
 
@@ -216,10 +240,10 @@ button {
   font-size: 36px;
   text-decoration: solid;
   text-align: center;
+  margin-top: 32px;
   margin-bottom: 32x;
   margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 32px;
+  margin-right: 0px;
 }
 
 
@@ -228,18 +252,18 @@ p {
   font-size: 24px;
   text-decoration: none;
   text-align: left;
+  margin-top: 32px;
   margin-bottom: 32px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
 }
 
 
 footer {
   color: #C99700;
   font-size: 24px;
+  margin-top: 32px;
   margin-bottom: 16px;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 16px;
 }
