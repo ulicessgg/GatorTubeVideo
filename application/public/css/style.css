@@ -6,19 +6,6 @@
   text-align: center;
 }
 
-
-@font-face {
-  font-family: mainFont;
-  src: url(../Jaro-Regular-VariableFont_opsz.ttf);
-}
-
-
-@font-face {
-  font-family: outFont;
-  src: url(../ChivoMono-VariableFont_wght.ttf);
-}
-
-
 header {
   background-color: rgba(0, 0, 0, 0.75);
   display: inline-flex;
