@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 /* CSS Document */
 * {
   text-align: center;
@@ -16,7 +15,6 @@ header {
   align-items: center;
 }
 
-
 body {
   background: linear-gradient(rgba(35, 17, 97, 0.625), rgba(35, 17, 97, 0.625));
   background-position: auto;
@@ -26,11 +24,10 @@ body {
   background-blend-mode: normal;
 }
 
-
 main {
   background: linear-gradient(rgba(0, 0, 0, 0.625), rgba(0, 0, 0, 0.625));
+  margin-top: 16px;
 }
-
 
 #home-id .home,
 #login-id .login,
@@ -41,7 +38,6 @@ main {
   color: #933311;
 }
 
-
 .home:hover,
 .login:hover,
 .register:hover,
@@ -50,7 +46,6 @@ main {
   font-size: 60px;
   color: #E9D597;
 }
-
 
 .main-nav li {
   color: #C99700;
@@ -61,14 +56,12 @@ main {
   margin-right: 16px;
 }
 
-
 .video-previews {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 
 img {
   border-color: #C99700;
@@ -81,7 +74,6 @@ img {
   margin-right: 32px;
 }
 
-
 video {
   color: #C99700;
   border-color: #C99700;
@@ -93,29 +85,24 @@ video {
   margin-right: 32px;
 }
 
-
 h1, h2, h3, h4, a, label, footer {
   font-family: mainFont;
 }
 
-
 h5, p, input {
   font-family: outFont;
 }
-
 
 h1 {
   color: #C99700;
   font-size: 72px;
 }
 
-
 a {
   color: #C99700;
   text-align: center;
   font-weight: bold;
 }
-
 
 h2 {
   color: #E9D597;
@@ -129,37 +116,24 @@ h2 {
   -webkit-text-stroke: 1px #C99700;
 }
 
-
 h3 {
   color: #E9D597;
   font-size: 48px;
-  text-decoration: underline;
+  text-decoration: none;
   text-align: center;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
   -webkit-text-stroke: 1px #C99700;
 }
-
 
 h4 {
   color: #E9D597;
   font-size: 36px;
-  text-align: left;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
 }
 
-
 .login-form, .registration-form, .upload-form {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   margin: 10px 0;
 }
 
@@ -173,11 +147,10 @@ h4 {
 }
 
 .upload-video {
-  display: inline-flex;
+  display: inline-block;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 10px 0;
+  align-items: right;
+  margin-left: 36px;
 }
 
 .login-box, .registration-box, .upload-box {
@@ -194,7 +167,6 @@ h4 {
   margin-right: 32px;
 }
 
-
 form {
   display: flex;
   text-align: center;
@@ -205,11 +177,11 @@ form {
   max-width: 900px;
 }
 
-
 label {
   color: #C99700;
   font-size: 48px;
   text-decoration: solid;
+  margin-bottom: 16px;
 }
 
 
@@ -217,34 +189,47 @@ input {
   color: #C99700;
   font-size: 36px;
   text-decoration: solid;
+  margin-bottom: 16px;
 }
 
+input[type="file"] {
+  margin-top: 32px;
+}
 
 button {
   color: #463077;
   font-size: 36px;
   text-decoration: solid;
   text-align: center;
+  margin-bottom: 32px;
 }
 
+.vid-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  margin: 10px 0;
+}
+
+.comment-section {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: left;
+  margin: 10px 0;
+}
 
 p {
   color: #E9D597;
   font-size: 24px;
   text-decoration: none;
-  text-align: left;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
 }
-
 
 footer {
   color: #C99700;
   font-size: 24px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  height: 100%;
+  width: 100%;
   margin-top: 32px;
-  margin-bottom: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
 }
