@@ -16,7 +16,6 @@
                     <li><a href="login.html" class="login">Login</a></li>
                     <li><a href="registration.html" class="register">Register</a></li>
                     <li><a href="postvideo.html" class="post">Post</a></li>
-                    <li><a href="viewpost.html" class="view">View Post</a></li>
                 </ul>
             </nav>
         </header>
@@ -26,45 +25,37 @@
        
         <div class="registration-form">
             <form action="app.php">
-
-
-                <div class="registration1">
-                    <label for="email">Email:</label>
+                <div class="registration-item">
+                    <label for="email">Email: </label>
                     <input type="email" name="email" id="email" placeholder="user@email.ext" required />
                 </div>
 
-
-                <div class="registration2">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" id="username" placeholder="Username" required /><br>
+                <div class="registration-item">
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username" placeholder="Username" required />
                 </div>
 
-
-                <div class="registration3">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" placeholder="Password" required /><br>
+                <div class="registration-item">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Password" required />
                 </div>
 
-
-                <div class="registration4">
-                    <label for="confirm_password">Confirm Password:</label>
-                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Password" required /><br>
+                <div class="registration-item">
+                    <label for="confirm_password">Confirm Password: </label>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Password" required />
                 </div>
 
-
-                <div class="registration5">
+                <div class="registration-box">
                     <label for="confirm_age">I confirm I am 13+ years of age</label>
-                    <input type="checkbox" name="confirm_age" id="confirm_age" required /><br>
+                    <input type="checkbox" name="confirm_age" id="confirm_age" required />
                 </div>
 
-
-                <div class="registration6">
+                <div class="registration-box">
                     <label for="tos">I agree to the <a href="#">Terms of Service</a></label>
-                    <input type="checkbox" name="tos" id="tos" required /><br>
+                    <input type="checkbox" name="tos" id="tos" required />
                 </div>
 
-
-                <div class="registration7">
+                <div class="registration-button">
                     <button type="submit">Register</button>
                     <button type="reset">Clear</button>
                 </div>
