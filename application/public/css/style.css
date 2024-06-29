@@ -34,7 +34,7 @@ main {
 #register-id .register,
 #post-id .post,
 #view-id .view {
-  font-size: 60px;
+  font-size: clamp(24px, 42px, 60px);
   color: #933311;
 }
 
@@ -43,13 +43,13 @@ main {
 .register:hover,
 .post:hover,
 .view:hover {
-  font-size: 60px;
+  font-size: clamp(24px, 42px, 60px);
   color: #E9D597;
 }
 
 .main-nav li {
   color: #C99700;
-  font-size: 60px;
+  font-size: clamp(24px, 42px, 60px);
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -95,7 +95,8 @@ h5, p, input {
 
 h1 {
   color: #C99700;
-  font-size: 72px;
+  font-size: clamp(36px, 54px, 72px);
+
 }
 
 a {
