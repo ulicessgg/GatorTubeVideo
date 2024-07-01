@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", () => {displayPhotos();});
+
+function displayPhotos() 
+{
+    const container = document.getElementById("photo-container");
+
+    fetch("https://jsonplaceholder.typicode.com/albums/2/photos")
+        .then(response => response.json())
+        .then(info => {
+            info.forEach(photo => {
+                const photoDiv = document.createElement("div");
+                photoDiv.classList.add("photo-item");
+                photoDiv.innerHTML = `<img src="${photo.url}" alt="${photo.title}" width="150" height="150"><p>${photo.title}</p>`;
+                container.appendChild(photoDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Fetch Error', error);
+        });
+}
+
 function validateRegistration() 
 {
     const usernameDelimeters = /^[a-zA-Z][a-zA-Z0-9]{2,}$/;
@@ -9,16 +30,13 @@ function validateRegistration()
 
     if (!usernameDelimeters.test(userName)) 
     {
-        alert("Please enter a valid email username");
-        alert("Username must begin with a character from a-z/A-Z and have 3 or more alphanumeric characters");
+        alert("Please enter a valid email username\nUsername must begin with a character from a-z/A-Z and have 3 or more alphanumeric characters");
         return false;
     }
 
     if (!passwordDelimeters.test(userPass)) 
     {
-        alert("Please enter a valid password");
-        alert("Username must have 8 or more characters AND contain at least 1 upper case letter AND 1 number AND one of the following special characters");
-        alert("/ * - + ! @ # $ ^ & ~ [ ]");
+        alert("Please enter a valid password\nUsername must have 8 or more characters AND contain at least 1 upper case letter AND 1 number AND one of the following special characters\n/ * - + ! @ # $ ^ & ~ [ ]");
         return false;
     }
 
@@ -27,6 +45,9 @@ function validateRegistration()
         alert("Passwords must match");
         return false;
     }
+
+    alert("Registration Submitted Succesffuly");
+    //window.location.href = "../html/login.html";
 
     return true;
 }
