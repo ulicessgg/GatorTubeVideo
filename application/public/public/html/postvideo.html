@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Sergio Ulices Gonzalez Guerrero"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <title>Post Video</title>
+    </head>
+    <body id="post-id">
+        <header>
+            <h1>GatorTube</h1>
+            <nav>
+                <ul class="main-nav">
+                    <input type="text" placeholder="Search">
+                    <li><a href="postvideo.html" class="post">Post</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                    <li><a href="registration.html" class="register">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="left-side-bar">
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="#" class="shorts">Shorts</a></li>  
+            <li><a href="#" class="subscriptions">Subscriptions</a></li>
+            <li><a href="#" class="account">My Account</a></li>
+        </div>
+    </body>
+    <main>
+        <h2>Post</h2>
+        <div class="upload-form">
+            <form action="upload.php">
+                <div class="upload-item">
+                    <label for="title">Post Title:</label>
+                    <input type="text" name="title" id="title" placeholder="Title" required />
+                </div>
+                
+                <div class="upload-item">
+                    <label for="description">Post Description:</label>
+                    <input type="text" name="description" id="description" placeholder="Description" required />
+                </div>
+    
+                <div class="upload-video">
+                    <label for="video">Upload Video:</label>
+                    <input type="file" name="video" id="video" accept="video/*" required />
+                </div>
+
+                <div class="upload-video">
+                    <label for="thumbnail">Upload Thumbnail:</label>
+                    <input type="file" name="thumbnail" id="thumbnail" accept="image/*" required />
+                </div>
+    
+                <div class="upload-box">
+                    <label for="aup">I accept to the <a href="#">Acceptable Use Policy</a></label>
+                    <input type="checkbox" name="aup" id="aup" required />
+                </div>
+    
+                <div class="upload-button">
+                    <button type="submit">Post</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <body class="resources">
+        <div class="resource-links">
+            <div class="mascot">
+                <img src="../goldengategrain.jpg" width="240" height="240" alt="Beach Shore Overlooking the Golden Gate Bridge as placeholder for mascot"/>
+            </div>
+            <div class="aboutus">
+                <h5>About Us</h5>
+                <li><a href="#" class="about">About GatorTube</a></li>
+                <li><a href="#" class="access">Accessibility</a></li>
+                <li><a href="#" class="jobs">Careers</a></li>
+                <li><a href="#" class="sustain">Sustainability</a></li>
+            </div>
+            <div class="support">
+                <h5>Support</h5>
+                <li><a href="#" class="contact">Contact Us</a></li>
+                <li><a href="#" class="tos">Terms & Conditions</a></li>
+                <li><a href="#" class="aup">Acceptable Use Policy</a></li>
+                <li><a href="#" class="cookies">Cookie Settings</a></li>
+            </div>
+            <div class="socials">                
+                <h5>Social Media</h5>
+                <li><a href="#" class="fb">Facebook</a></li>
+                <li><a href="#" class="x">X (Formerly Twitter)</a></li>
+                <li><a href="#" class="ig">Instagram</a></li>
+                <li><a href="#" class="tt">TikTok</a></li>
+            </div>
+        </div>
+        <footer>
+            Ulices Gonzalez &copy; 2024
+        </footer>
+    </body>
+</html>
