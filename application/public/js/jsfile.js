@@ -10,7 +10,7 @@ function displayPhotos()
             info.forEach(photo => {
                 const photoDiv = document.createElement("div");
                 photoDiv.classList.add("photo-item");
-                photoDiv.innerHTML = `<img src="${photo.url}" alt="${photo.title}" width="150" height="150"><p>${photo.title}</p>`;
+                photoDiv.innerHTML = `<img src="${photo.url}" alt="${photo.title}" width="180" height="180"><a href="viewpost.html" class="post"><p>${photo.title}</p></a>`;
                 container.appendChild(photoDiv);
             });
         })
@@ -47,7 +47,6 @@ function validateRegistration()
     }
 
     alert("Registration Submitted Succesffuly");
-    //window.location.href = "../html/login.html";
 
     return true;
 }
