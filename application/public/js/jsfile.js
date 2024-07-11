@@ -11,12 +11,40 @@ function displayPhotos()
                 const photoDiv = document.createElement("div");
                 photoDiv.classList.add("photo-item");
                 photoDiv.innerHTML = `<img src="${photo.url}" alt="${photo.title}" width="180" height="180"><a href="viewpost.html" class="post"><p>${photo.title}</p></a>`;
+                photoDiv.addEventListener("click", () => fadeOut(photoDiv));
                 container.appendChild(photoDiv);
             });
+            updateCount(info.length);
         })
         .catch(error => {
             console.error('Fetch Error', error);
         });
+}
+
+function fadeOut(photo) 
+{
+    let opacity = 1;
+    const effect = setInterval(() => {
+        if(opacity <= 0)
+        {
+            clearInterval(effect);
+            photo.remove();
+            updateCount(-1);
+        }
+        else
+        {
+            opacity -= 0.25
+            photo.style.opacity = opacity;
+        }
+    }, 60)
+}
+
+function updateCount(num) 
+{
+    const count = document.getElementById("photos-contained");
+    var temp = parseInt(count.textContent.split(": ")[1]);
+    temp += num;
+    count.textContent = 'Number of Photos: ' + temp;
 }
 
 function validateRegistration() 
