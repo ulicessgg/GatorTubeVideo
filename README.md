@@ -19,9 +19,14 @@ Please follow the instructions below and fill in the information requested when 
 # Build/Run Instructions
 
 ## Build Instructions
-1. steps here
-2. steps here
+1. Enter cd csc317-code-ulicessgg\application into terminal/command line
+2. Enter npm install into terminal/command line
 
 ## Run Instructions
-1. steps here
-2. steps here 
+1. Enter npm start into terminal/command line
+2. Enter localhost:3000 into browser search bar
+
+## Exit Instructions
+1. Close Browser
+2. In terminal/command line press ctrl/cmnd + c and enter Y
+
