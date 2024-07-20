@@ -6,17 +6,17 @@
         <meta name="Author" content="Sergio Ulices Gonzalez Guerrero"/>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script defer src="../js/jsfile.js"></script>
-        <title>Index</title>
+        <title>View Post</title>
     </head>
-    <body id="home-id">
+    <body id="view-id">
         <header>
             <h1>GatorTube</h1>
             <nav>
                 <ul class="main-nav">
                     <input type="text" placeholder="Search">
-                    <li><a href="postvideo.hbs" class="post">Post</a></li>
-                    <li><a href="login.hbs" class="login">Login</a></li>
-                    <li><a href="registration.hbs" class="register">Register</a></li>
+                    <li><a href="postvideo.html" class="post">Post</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                    <li><a href="registration.html" class="register">Register</a></li>
                 </ul>
             </nav>
         </header>
@@ -24,15 +24,32 @@
             <div class="logo">
                 <img src="../sf.png" width="120" height="120" />
             </div>
-            <li><a href="index.hbs" class="home">Home</a></li>
+            <li><a href="index.html" class="home">Home</a></li>
             <li><a href="#" class="shorts">Shorts</a></li>  
             <li><a href="#" class="subscriptions">Subscriptions</a></li>
             <li><a href="#" class="account">My Account</a></li>
         </div>
     </body>
     <main>
-        <div id="photos-contained" class="photos-contained">Number of Photos: 0</div>
-        <div id="photo-container" class="photo-container"></div>
+        <article class="user-post">
+            <video id="video" width="1200" height="675" controls>
+                <source src="../12599348-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="vid-info">
+                <h3>Title: Lorem Ispum Unum</h3>
+                <p id="description">Description: Lorem Ispum Unum</p>
+                <p id="author">Posted by: ulicessgg</p>
+                <p id="creation-time">Posted at: 07/04/2024 @ 13:57:48pm</p>
+            </div>
+            <section id="comments">
+                <div class="comment-section">
+                    <h3>Comments</h3>
+                    <h4>Username: </h4>
+                    <p>Insert User Comments here</p>
+                    <br>
+                </div>
+            </section>
+        </article>
     </main>
     <body class="resources">
         <div class="resource-links">

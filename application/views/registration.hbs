@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Sergio Ulices Gonzalez Guerrero"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script defer src="../js/jsfile.js"></script>
+        <title>Registration</title>
+    </head>
+    <body id="register-id">
+        <header>
+            <h1>GatorTube</h1>
+            <nav>
+                <ul class="main-nav">
+                    <input type="text" placeholder="Search">                    
+                    <li><a href="postvideo.html" class="post">Post</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                    <li><a href="registration.html" class="register">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="left-side-bar">
+            <div class="logo">
+                <img src="../sf.png" width="120" height="120" />
+            </div>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="#" class="shorts">Shorts</a></li>  
+            <li><a href="#" class="subscriptions">Subscriptions</a></li>
+            <li><a href="#" class="account">My Account</a></li>
+        </div>
+    </body>
+    <main>
+        <h2>Register</h2>
+       
+        <div class="registration-form">
+            <form name="registration" action="login.html" onsubmit="return validateRegistration()" method="post">
+                <div class="registration-item">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="user@email.ext" required />
+                </div>
+
+                <div class="registration-item">
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username" placeholder="Username" required />
+                </div>
+
+                <div class="registration-item">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Password" required />
+                </div>
+
+                <div class="registration-item">
+                    <label for="confirm_password">Confirm Password: </label>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Password" required />
+                </div>
+
+                <div class="registration-box">
+                    <label for="confirm_age">I confirm I am 13+ years of age</label>
+                    <input type="checkbox" name="confirm_age" id="confirm_age" required />
+                </div>
+
+                <div class="registration-box">
+                    <label for="tos">I agree to the <a href="#">Terms of Service</a></label>
+                    <input type="checkbox" name="tos" id="tos" required />
+                </div>
+
+                <div class="registration-button">
+                    <button type="submit">Register</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <body class="resources">
+        <div class="resource-links">
+            <div class="mascot">
+                <img src="../gator.png" width="300" height="300s" alt="" />
+            </div>
+            <div class="aboutus">
+                <h5>About Us</h5>
+                <li><a href="#" class="about">About GatorTube</a></li>
+                <li><a href="#" class="access">Accessibility</a></li>
+                <li><a href="#" class="jobs">Careers</a></li>
+                <li><a href="#" class="sustain">Sustainability</a></li>
+            </div>
+            <div class="support">
+                <h5>Support</h5>
+                <li><a href="#" class="contact">Contact Us</a></li>
+                <li><a href="#" class="tos">Terms & Conditions</a></li>
+                <li><a href="#" class="aup">Acceptable Use Policy</a></li>
+                <li><a href="#" class="cookies">Cookie Settings</a></li>
+            </div>
+            <div class="socials">                
+                <h5>Social Media</h5>
+                <li><a href="#" class="fb">Facebook</a></li>
+                <li><a href="#" class="x">X (Formerly Twitter)</a></li>
+                <li><a href="#" class="ig">Instagram</a></li>
+                <li><a href="#" class="tt">TikTok</a></li>
+            </div>
+        </div>
+        <footer>
+            Ulices Gonzalez &copy; 2024
+        </footer>
+    </body>
+</html>

@@ -6,17 +6,17 @@
         <meta name="Author" content="Sergio Ulices Gonzalez Guerrero"/>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script defer src="../js/jsfile.js"></script>
-        <title>Index</title>
+        <title>Login</title>
     </head>
-    <body id="home-id">
+    <body id="login-id">
         <header>
             <h1>GatorTube</h1>
             <nav>
                 <ul class="main-nav">
                     <input type="text" placeholder="Search">
-                    <li><a href="postvideo.hbs" class="post">Post</a></li>
-                    <li><a href="login.hbs" class="login">Login</a></li>
-                    <li><a href="registration.hbs" class="register">Register</a></li>
+                    <li><a href="postvideo.html" class="post">Post</a></li>
+                    <li><a href="login.html" class="login">Login</a></li>
+                    <li><a href="registration.html" class="register">Register</a></li>
                 </ul>
             </nav>
         </header>
@@ -24,15 +24,45 @@
             <div class="logo">
                 <img src="../sf.png" width="120" height="120" />
             </div>
-            <li><a href="index.hbs" class="home">Home</a></li>
+            <li><a href="index.html" class="home">Home</a></li>
             <li><a href="#" class="shorts">Shorts</a></li>  
             <li><a href="#" class="subscriptions">Subscriptions</a></li>
             <li><a href="#" class="account">My Account</a></li>
         </div>
     </body>
     <main>
-        <div id="photos-contained" class="photos-contained">Number of Photos: 0</div>
-        <div id="photo-container" class="photo-container"></div>
+        <h2>Log In</h2>
+        <div class="login-form">
+            <form action="#">
+                <div class="login-item">
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="username" placeholder="Username" />
+                </div>
+
+                <div class="login-link">
+                    <a href="#">Forgot Username</a>
+                </div>
+
+                <div class="login-item">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" placeholder="Password" />
+                </div>
+
+                <div class="login-link">
+                    <a href="#">Forgot Password</a></label>
+                </div>
+
+                <div class="login-box">
+                    <label for="stay_in">Stay Signed In</label>
+                    <input type="checkbox" name="stay_in" id="stay_in" />
+                </div>
+
+                <div class="login-button">
+                    <button type="submit">Log In</button>
+                    <button type="reset">Clear</button>                
+                </div>
+            </form>
+        </div>
     </main>
     <body class="resources">
         <div class="resource-links">
