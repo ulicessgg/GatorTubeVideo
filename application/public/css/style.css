@@ -139,6 +139,18 @@ button:hover {
   color: #38635A;
 }
 
+.register-redirect, .login-redirect {
+  color: #26547C;
+  font-size: 36px;
+  text-decoration: solid;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.register-redirect:hover, .login-redirect:hover {
+  color: #38635A;
+}
+
 .main-nav a {
   color: #C99700;
 }
