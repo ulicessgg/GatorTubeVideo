@@ -157,7 +157,8 @@ button:hover {
 
 .post:hover,
 .login:hover,
-.register:hover {
+.logout:hover,
+.register:hover  {
   color: #E9D597;
   font-size: clamp(24px, 42px, 60px);
   text-decoration: none;
