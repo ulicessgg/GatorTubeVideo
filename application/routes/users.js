@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const db = require('../conf/database')
+const db = require('../conf/database');
 const bcrypt = require('bcrypt');
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
 const {errorPrint, successPrint} = require('../helpers/debug/debugprinters')
 
 /**
@@ -63,14 +65,17 @@ router.post('/login', async function(req, res, next){
       
       // check db for user row based on username
       var [rows, fields] = await db.query(`SELECT * FROM users where username=?;`, [username]);
-      // make sure there is only one row
-      if(rows.length == 0)
+      const currentUser = rows[0];
+      
+      if(!currentUser)
       {
-        errorPrint('Username does not exists');
-        return res.redirect('/login');
+        req.flash("error", "Invalid Login Credentials");
+        return req.session.save((err) => {
+          if(err) next(err);
+          return res.redirect('/login');
+        });
       }
 
-      var currentUser = rows[0];
       // get hashedpassword and call bcrypt.compare
       var hashedPassword = currentUser.password;
 
@@ -81,14 +86,26 @@ router.post('/login', async function(req, res, next){
       if(passwordAuthenticated)
       {
         successPrint(`Welcome, ${username}`);
-        return res.redirect('/');
+        req.session.user = {
+          username: currentUser.username,
+          userId: currentUser.id,
+          email: currentUser.email
+        };
+        req.flash("success", `Welcome, ${currentUser.username}`);
+        return req.session.save((err) => {
+          if(err) next(err);
+          return res.redirect('/');
+        });
       }
       // else
       //    login failed
       else
       {
-        errorPrint('Password is Incorrect');
-        return res.redirect('/login');
+        req.flash("error", "Invalid Login Credentials");
+        return req.session.save((err) => {
+          if(err) next(err);
+          return res.redirect('/login');
+        });
       }
       
   } 
@@ -103,11 +120,11 @@ router.post('/login', async function(req, res, next){
  * logout user
  */
 
-// install npm express sessions
-// install npm express flash
-
 router.post('/logout', function(req, res, next){
-  
+  return req.session.destroy((err) => {
+    if(err) next(err);
+    return res.redirect('/');
+  });
 });
 
 /**
@@ -123,7 +140,8 @@ router.post('/postvideo', function(req, res, next){
  */
 
 router.get(('/:id(\\d+)'), function(req, res, next){
-
-})
+  var userId = req.params.id;
+  res.render('profile');
+});
 
 module.exports = router;

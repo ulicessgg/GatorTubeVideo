@@ -13,11 +13,17 @@
   </head>
 
   <body>
-    {{> header}}
-    {{> sidebar}}
-    {{{body}}}
-    {{> resources}}
-    {{> footer}}
+    {{log this}}
+    {{#if (nonEmptyObject messages)}}
+      {{>flashmessages this}}
+    {{/if}}
+    <div id="container">
+      {{> header}}
+      {{> sidebar}}
+      {{{body}}}
+      {{> resources}}
+      {{> footer}}
+    </div>
   </body>
 
 </html>

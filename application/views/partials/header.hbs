@@ -3,12 +3,18 @@
     <nav>
         <ul class="main-nav">
             <input type="text" placeholder="Search">
-            <li><a href="/postvideo" class="post">Post</a></li>
-            {{#if session.username}}
-                <li><a href="/logout" class="logout">Logout</a></li>
+            {{#if this.isLogged}}
+                <li><a href="/postvideo" class="post">Post</a></li>
+                <li><a href="#" class="account">Hi, {{user.username}}</a></li>
+                <li>
+                    <form class="logout-form" action="/users/logout" method="post">
+                        <button class="logout" type="submit">Log Out</button>
+                    </form>
+                </li>
             {{else}}
-                <li><a href="/login" class="login">Login</a></li>
+                <li><a href="/registration" class="post">Post</a></li>
                 <li><a href="/registration" class="register">Register</a></li>
+                <li><a href="/login" class="login">Login</a></li>
             {{/if}}
         </ul>
     </nav>
