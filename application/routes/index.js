@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const {getRecentPosts} = require('../middleware/posts');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', getRecentPosts, function(req, res, next) {
   res.render('index', { title: 'Home'});
 });
 
@@ -19,11 +20,6 @@ router.get('/registration', function(req, res, next) {
 /** /post */
 router.get('/postvideo', function(req, res, next) {
   res.render('postvideo', { title: 'Post Video'});
-});   
-
-/** /viewpost */
-router.get('/viewpost', function(req, res, next) {
-  res.render('viewpost', { title: 'View Post'});
-});   
+});     
 
 module.exports = router;

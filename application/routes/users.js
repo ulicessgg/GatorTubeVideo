@@ -4,6 +4,8 @@ const db = require('../conf/database');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
+const {isLoggedIn, isMyProfile} = require('../middleware/auth');
+const {checkUsername, checkUsernameUnique, checkEmailUnique, checkPassword, checkPasswordConfrimation} = require('../middleware/validation');
 const {errorPrint, successPrint} = require('../helpers/debug/debugprinters')
 
 /**
@@ -11,30 +13,12 @@ const {errorPrint, successPrint} = require('../helpers/debug/debugprinters')
  * localhost:3000/users/register
  */
 
-router.post('/register', async function(req, res, next){
+router.post('/register', checkUsername, checkUsernameUnique, checkEmailUnique, checkPassword, checkPasswordConfrimation, async function(req, res, next){
   //console.table(req.body);
   //res.end();
   var {email, username, password, confirm_password} = req.body;
   try{
-    /**
-     * username, password, confirm_password, and email valdiation goes here
-     */
-      var [rows, fields] = await db.query(`SELECT * FROM users where email=?;`, [email]);
-      if(rows?.length > 0)
-      {
-        errorPrint('Email already exists');
-        return res.redirect('/registration');
-      }
-
-      var [rows, fields] = await db.query(`SELECT * FROM users where username=?;`, [username]);
-      if(rows?.length > 0)
-      {
-        errorPrint('Username already exists');
-        return res.redirect('/registration');
-      }
-
       var hashedPassword = await bcrypt.hash(password, 7);
-      
       var [resultObject, _] = await db.query(`INSERT INTO users (email, username, password) VALUE (?,?,?);`, [email, username, hashedPassword]);
       if(resultObject?.affectedRows == 1)
       {
@@ -62,13 +46,11 @@ router.post('/login', async function(req, res, next){
   // grab data from body
   var {username, password} = req.body;
   try{
-      
       // check db for user row based on username
       var [rows, fields] = await db.query(`SELECT * FROM users where username=?;`, [username]);
       const currentUser = rows[0];
       
-      if(!currentUser)
-      {
+      if(!currentUser){
         req.flash("error", "Invalid Login Credentials");
         return req.session.save((err) => {
           if(err) next(err);
@@ -83,8 +65,7 @@ router.post('/login', async function(req, res, next){
 
       // if true
       //    login
-      if(passwordAuthenticated)
-      {
+      if(passwordAuthenticated){
         successPrint(`Welcome, ${username}`);
         req.session.user = {
           username: currentUser.username,
@@ -99,18 +80,15 @@ router.post('/login', async function(req, res, next){
       }
       // else
       //    login failed
-      else
-      {
+      else{
         req.flash("error", "Invalid Login Credentials");
         return req.session.save((err) => {
           if(err) next(err);
           return res.redirect('/login');
         });
       }
-      
   } 
-  catch(err)
-  {
+  catch(err){
     console.log(err);
     next(err);
   }
@@ -128,18 +106,10 @@ router.post('/logout', function(req, res, next){
 });
 
 /**
- * post user video
- */
-
-router.post('/postvideo', function(req, res, next){
-
-});
-
-/**
  * 
  */
 
-router.get(('/:id(\\d+)'), function(req, res, next){
+router.get(('/:id(\\d+)'), isLoggedIn, isMyProfile, function(req, res, next){
   var userId = req.params.id;
   res.render('profile');
 });

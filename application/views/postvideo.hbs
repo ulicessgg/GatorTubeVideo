@@ -1,7 +1,7 @@
 <main>
     <h2>Post</h2>
     <div class="upload-form">
-        <form action="/viewpost">
+        <form action="/posts/create" method="post" enctype="multipart/form-data">
             <div class="upload-item">
                 <label for="title">Post Title:</label>
                 <input type="text" name="title" id="title" placeholder="Title" required />
@@ -14,22 +14,24 @@
 
             <div class="upload-video">
                 <label for="video">Upload Video:</label>
-                <input type="file" name="video" id="video" accept="video/*" required />
+                <input type="file" name="videoUpload" id="video" accept="video/*" required />
             </div>
 
+        <!--
             <div class="upload-video">
                 <label for="thumbnail">Upload Thumbnail:</label>
                 <input type="file" name="thumbnail" id="thumbnail" accept="image/*" required />
             </div>
-
+        -->
+        
             <div class="upload-box">
                 <label for="aup">I accept to the <a href="#" class="aup">Acceptable Use Policy</a></label>
                 <input type="checkbox" name="aup" id="aup" required />
             </div>
 
             <div class="upload-button">
-                <button type="submit">Post</button>
-                <button type="reset">Clear</button>
+                <button class="post-button" type="submit">Post</button>
+                <button class="reset-button" type="reset">Clear</button>
             </div>
         </form>
     </div>

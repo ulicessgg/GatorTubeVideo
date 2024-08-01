@@ -127,7 +127,7 @@ input[type="file"] {
   margin-top: 32px;
 }
 
-.submit-button, .reset-button, .login-button, .register-button {
+.submit-button, .reset-button, .login-button, .register-button, .post-button {
   color: #26547C;
   font-size: 36px;
   text-decoration: solid;
@@ -135,7 +135,7 @@ input[type="file"] {
   margin-bottom: 32px;
 }
 
-.submit-button:hover, .reset-button:hover, .login-button:hover, .register-button:hover {
+.submit-button:hover, .reset-button:hover, .login-button:hover, .register-button:hover, .post-button:hover {
   color: #38635A;
 }
 
@@ -177,25 +177,6 @@ input[type="file"] {
   align-items: center;
 }
 
-.logout-form {
-  margin: 0;
-  padding: 0;
-}
-
-.logout {
-  background: none;
-  border: none;
-  color: #C99700;
-  font-size: clamp(24px, 42px, 60px);
-  margin: 0;
-  padding: 0;
-}
-
-.logout:hover {
-  color: #E9D597;
-  text-decoration: none;
-}
-
 .left-side-bar {
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
   height: 100%; 
@@ -221,7 +202,7 @@ input[type="file"] {
 }
 
 .left-side-bar a:hover {
-  color: #6B702B;
+  color: #933311;
   font-size: 24px;
   font-weight: bold;
 }
@@ -264,46 +245,41 @@ input[type="file"] {
   color: #604C11;
 }
 
-.photo-container {
+.video-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   justify-content: space-evenly;
   margin-top: 30px;
 }
 
-.photo-item {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
-  padding: 10px;
   cursor: pointer;
 }
 
-.photo-item img {
+.card img {
   color: #53565a;
   border: thick;
   border-style: solid;
-  border-color: #53565a;
-  height: auto;
-  width: 100%;
+  height: 144px;
+  width: 256px;
 }
 
-.photo-item p {
+.card-title a {
+  color: #E9D597;
   font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
   text-align: center;
+  -webkit-text-stroke: 1px #C99700;
 }
 
-.photo-item p:hover {
-  color: #933311;
-}
-
-.photos-contained {
-  font-size: 18px;
-  color: #ffffff;
-  margin-top: 18px;
-  margin-bottom: 18px;;
+.card-title:hover a {
+  color: #38635A;
+  -webkit-text-stroke: 1px #6B702B;
 }
 
 .login-form, .registration-form, .upload-form {

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {displayPhotos();});
-
+/*
 function displayPhotos() 
 {
     const container = document.getElementById("photo-container");
@@ -11,16 +11,15 @@ function displayPhotos()
                 const photoDiv = document.createElement("div");
                 photoDiv.classList.add("photo-item");
                 photoDiv.innerHTML = `<img src="${photo.url}" alt="${photo.title}" width="180" height="180"><a href="viewpost" class="post"><p>${photo.title}</p></a>`;
-                photoDiv.addEventListener("click", () => fadeOut(photoDiv));
+                //photoDiv.addEventListener("click", () => fadeOut(photoDiv));
                 container.appendChild(photoDiv);
             });
-            updateCount(info.length);
         })
         .catch(error => {
             console.error('Fetch Error', error);
         });
 }
-
+*/
 function fadeOut(photo) 
 {
     let opacity = 1;
@@ -37,14 +36,6 @@ function fadeOut(photo)
             photo.style.opacity = opacity;
         }
     }, 60)
-}
-
-function updateCount(num) 
-{
-    const count = document.getElementById("photos-contained");
-    var temp = parseInt(count.textContent.split(": ")[1]);
-    temp += num;
-    count.textContent = 'Number of Photos: ' + temp;
 }
 
 function validateRegistration() 
