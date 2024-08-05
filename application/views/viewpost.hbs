@@ -3,19 +3,22 @@
         <video id="video" width="1200" height="675" controls>
             <source src="/{{currentPost.video}}" type="video/mp4">
         </video>
-        <div class="vid-info">
-            <h3>Title: {{currentPost.title}}</h3>
-            <p id="description">Description: {{currentPost.description}}</p>
+        <div class="organizer">
+            <div class="vid-info">
+            <h3>{{currentPost.title}}</h3>
+            <p id="description">{{currentPost.description}}</p>
             <p id="author">Posted by: {{currentPost.username}}</p>
             <p id="creation-time">Posted at: {{currentPost.created_at}}</p>
         </div>
         <section id="comments">
             <div class="comment-section">
                 <h3>Comments</h3>
-                <h4>Username: </h4>
-                <p>Insert User Comments here</p>
-                <br>
+                <div class="user-comments">
+                    <h4>Username: </h4>
+                    <p>Insert User Comments here</p>
+                </div>
             </div>
         </section>
+        </div>
     </article>
 </main>

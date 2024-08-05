@@ -2,8 +2,22 @@
     <div class="logo">
         <img src="/public/sf.png" width="120" height="120" />
     </div>
-    <li><a href="/" class="home">Home</a></li>
-    <li><a href="#" class="shorts">Shorts</a></li>  
-    <li><a href="#" class="subscriptions">Subscriptions</a></li>
-    <li><a href="#" class="settings">Settings</a></li>
+    <nav>
+        <ul class="left-sidebar">
+            {{#if this.isLogged}}
+            <li><a href="/users/{{user.userId}}" class="account">Hi, {{user.username}}</a></li>
+            <li><a href="#" class="logout" onclick="document.getElementById('logout-form').submit(); return false;">Log Out</a></li>
+            <form id="logout-form" action="/users/logout" method="post" style="display: none;"></form>
+            <li><a href="#" class="history">History</a></li>
+            <li><a href="#" class="playlists">Playlists</a></li>
+            <li><a href="#" class="later">Watch Later</a></li>
+            <li><a href="#" class="liked">Liked Videos</a></li>
+            <li><a href="#" class="downloads">Downloads</a></li>
+            <li><a href="#" class="subscriptions">Subscriptions</a></li>
+            {{else}}
+            <li><a href="/registration" class="register">Register</a></li>
+            <li><a href="/login" class="login">Login</a></li>
+            {{/if}}
+        </ul>
+    </nav>
 </div>

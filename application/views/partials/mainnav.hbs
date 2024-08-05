@@ -1,0 +1,16 @@
+<div class="main-nav-bar">
+    <nav>
+        <ul class="main-nav">
+            <li><a href="/" class="home">Home</a></li>
+            <li><a href="#" class="shorts">Shorts</a></li>
+            <li><a href="#" class="music">Music</a></li>
+            <li><a href="#" class="explore">Explore</a></li>
+            <li><a href="#" class="more">More</a></li>
+            {{#if this.isLogged}}
+            <li><a href="/postvideo" class="post">Post</a></li>
+            {{else}}
+            <li><a href="/login" class="post">Post</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</div>
