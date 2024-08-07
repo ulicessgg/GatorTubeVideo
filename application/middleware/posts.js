@@ -53,6 +53,7 @@ module.exports = {
 
     getCommentsByPostId: async function(req, res, next) {
         const postId = req.params.id;
+        
     },
 
     getRecentPosts: async function(req, res, next) {

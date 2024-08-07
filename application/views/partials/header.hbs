@@ -2,6 +2,11 @@
     <img class="titleimg1" src="/public/sfgate.png" width="130" height="96" />
     <h1 class="title" >GatorTube</h1>
     <img class="gator" src="/public/alli.png" width="168" height="96" />
-    <input class="search-bar" type="text" placeholder="Search">
+
+    <form class="search" action="/posts/search" method="get">
+        <input class="search-bar" type="text" name="searchTerm" value="{{searchTerm}}" placeholder="Search">
+        <button class="search-button" type="submit"></button>
+    </form>
+
     <img class="titleimg2" src="/public/sfgate2.png" width="130" height="96" />
 </header>

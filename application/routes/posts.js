@@ -60,8 +60,24 @@ router.get(('/:id(\\d+)'), getPostById, function(req, res, next) {
 }); 
 
 /** localhost:3000/posts/search?searchterm=term */
-router.get(('/search'), function(req, res, next) {
-    
+router.get(('/search'), async function(req, res, next) {
+    try{
+        const searchTerm = req.query.searchTerm;
+        const [rows, _] = await db.query(`select id, p.title, p.description, p.thumbnail, CONCAT_WS(" ", p.title, p.description) as haystack
+                                          from posts p
+                                          having haystack like ?;`, [`%${searchTerm}%`]);
+        if(rows.length)
+        {
+            res.locals.posts = rows;
+            res.render('index', { title: 'Home', searchTerm});
+        }
+        else{
+            return res.redirect('/');
+        }
+    }
+    catch(err){
+        next(err);
+    }
 }); 
 
 /** generates likes and option to like in viewpost */

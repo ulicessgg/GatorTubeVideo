@@ -13,6 +13,7 @@ const flash = require('express-flash');
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const postsRouter = require("./routes/posts");
+const commentsRouter = require("./routes/comments");
 
 const app = express();
 
@@ -28,6 +29,12 @@ app.engine(
     helpers: {
       nonEmptyObject: function(obj){
         return obj && obj.constructor === 'Object' && Object.keys(obj).length > 0;
+      },
+      formatDate: function(dateTimeString){
+        return new Date(dateTimeString).toLocaleString("en",{
+          dateStyle:"short",
+          timeStyle:"short",
+        })
       }
     }, //adding new helpers to handlebars for extra functionality
   })
@@ -70,6 +77,7 @@ app.use(function(req, res, next){
 
 app.use("/", indexRouter); // route middleware from ./routes/index.js
 app.use("/posts", postsRouter);
+app.use("/comments", commentsRouter);
 app.use("/users", usersRouter); // route middleware from ./routes/users.js
 
 /**
