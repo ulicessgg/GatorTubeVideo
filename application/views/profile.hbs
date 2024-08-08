@@ -1,0 +1,18 @@
+<main>
+    <article class="user-post">
+        <div class="organizer">
+            <div class="user-info">
+                <h3>{{user.username}}'s Profile</h3>
+                <p id="username">Username: {{user.username}}</p>
+                <p id="email">Email: {{user.email}}</p>
+                <img src="/public/pfp.png" width="300" height="300" alt="" />
+            </div>
+        </div>
+    </article>
+    <h3>Posted Videos</h3>
+    <div id="video-container" class="video-container">
+        {{#each posts}}
+        {{> post this}}
+        {{/each}}
+    </div>
+</main>

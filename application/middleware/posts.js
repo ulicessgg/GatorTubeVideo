@@ -52,7 +52,20 @@ module.exports = {
     },
 
     getCommentsByPostId: async function(req, res, next) {
-        const postId = req.params.id;
+        try{
+            const postId = req.params.id;
+            const [comments, _ ] = await db.query(`select c.id, c.text, c.created_at, u.username
+                                                   from comments c
+                                                   join users u on u.id=c.fk_user_id
+                                                   where c.fk_post_id=?
+                                                   order by c.created_at desc;`, [postId]);
+            res.locals.currentPost.comments = comments;
+            next();
+        }
+        catch(err){
+            console.log(err);
+            next(err);
+        }
         
     },
 
@@ -74,6 +87,20 @@ module.exports = {
     },
 
     getPostsByUserId: async function(req, res, next) {
+        try{
             const userId = req.params.id;
+            const [posts, _ ] = await db.query(`select p.id, p.title, p.created_at, u.username
+                                                from posts p
+                                                join users u 
+                                                on u.id=p.fk_user_id
+                                                where p.fk_user_id=?
+                                                order by p.created_at desc;`, [userId]);
+            res.locals.posts = posts;
+            next();
+        }
+        catch(err){
+            console.log(err);
+            next(err);
+        }
     }
 }

@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 const {isLoggedIn, isMyProfile} = require('../middleware/auth');
+const {getPostsByUserId} = require('../middleware/posts');
 const {checkUsername, checkUsernameUnique, checkEmailUnique, checkPassword, checkPasswordConfrimation} = require('../middleware/validation');
 const {errorPrint, successPrint} = require('../helpers/debug/debugprinters')
 
@@ -109,9 +110,8 @@ router.post('/logout', function(req, res, next){
  * 
  */
 
-router.get(('/:id(\\d+)'), isLoggedIn, isMyProfile, function(req, res, next){
-  var userId = req.params.id;
-  res.render('profile');
+router.get(('/:id(\\d+)'), isLoggedIn, isMyProfile, getPostsByUserId, function(req, res, next){
+  res.render('profile', { title: `${res.locals.user.username}'s Profile` });
 });
 
 module.exports = router;

@@ -1,30 +1,32 @@
 <script defer src="/public/js/viewpost.js"></script>
-<main>
+<main class="post-container">
     <article class="user-post">
         <video id="video" width="1200" height="675" controls>
             <source src="/{{currentPost.video}}" type="video/mp4">
         </video>
         <div class="organizer">
             <div class="vid-info">
-            <h3>{{currentPost.title}}</h3>
-            <div class="post-likes">
-                <span class="likes-button" data-postid="{{currentPost.id}}"></span>
-                <span class="likes-counter">{{currentPost.likes}}</span>
+                <h3>{{currentPost.title}}</h3>
+                <div class="post-likes">
+                    <span class="likes-button" data-postid="{{currentPost.id}}"></span>
+                    <span class="likes-counter">{{currentPost.likes}}</span>
+                </div>
+                <p id="description">{{currentPost.description}}</p>
+                <p id="author">Posted by: {{currentPost.username}}</p>
+                <p id="creation-time">Posted at: {{ formatDate currentPost.created_at}}</p>
             </div>
-            <p id="description">{{currentPost.description}}</p>
-            <p id="author">Posted by: {{currentPost.username}}</p>
-            <p id="creation-time">Posted at: {{ formatDate currentPost.created_at}}</p>
         </div>
-        <section id="comments">
-            <div class="comment-section">
+        <section id="comments-section">
+            <div class="organizer">
                 <h3>Comments</h3>
                 <div class="comment-input">
                     <textarea id="comment-box" class="comment-box"></textarea>
                     <i  id="comment-button" class="comment-button" aria-hidden="true" data-postid="{{currentPost.id}}"></i>
                 </div>
-                <div class="user-comments">
-                    <h4>Username: </h4>
-                    <p>Insert User Comments here</p>
+                <div id="comments" class="comments">
+                    {{#each currentPost.comments}}
+                        {{> comment this}}
+                    {{/each}}
                 </div>
             </div>
         </section>

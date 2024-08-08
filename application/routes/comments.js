@@ -1,3 +1,4 @@
+const db = require("../conf/database");
 const express = require('express');
 const { isLoggedIn } = require('../middleware/auth');
 const router = express.Router();
@@ -11,14 +12,24 @@ router.post('/create', isLoggedIn, async function(req, res, next){
             }).status(401);
         }
 
-        const {postId, text} = req.body;
+        const {postid, text} = req.body;
+
+        console.log("PostId:", postid);
+        console.log("Text:", text);
+        if (!postid || !text) {
+            return res.status(400).json({
+                status: "error",
+                message: "Post ID and text are required"
+            });
+        }
+
         const userId = req.session.user.userId;
-        var [insertRes, _] = await db.query(`insert into comments (text, fk_post_id, fk_user_id) VALUE (?,?,?)`, [text, postId, userId]);
+        var [insertRes, _] = await db.query(`insert into comments (text, fk_post_id, fk_user_id) VALUE (?,?,?)`, [text, postid, userId]);
         if(insertRes?.affectedRows == 1){
             return res.json({
                 status: "success",
                 text, 
-                postId, 
+                postid, 
                 username: req.session.user.username
             });
         }
