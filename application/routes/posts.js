@@ -81,8 +81,61 @@ router.get(('/search'), async function(req, res, next) {
 }); 
 
 /** generates likes and option to like in viewpost */
-router.post(('/like/:id(\\d+)'), isLoggedIn, function(req, res, next) {
-    
+router.post(('/like/:id(\\d+)'), async function(req, res, next) {
+    try{
+        if(!req.session.user){
+            return res.json({
+                status: "error",
+                message: "you must be logged in to like posts"
+            }).status(401);
+        }
+        const postId = req.params.id;
+        const userId = req.session.user.userId;
+        var [rows, _ ] = await db.query(`select * from likes where fk_post_id=? AND fk_user_id=?`, [postId, userId]);
+
+        if(rows.length == 0){
+            var [insertRes, _] = await db.query(`insert into likes (fk_post_id, fk_user_id) VALUE (?,?)`, [postId, userId]);
+            if(insertRes.affectedRows == 1){
+                resp = {
+                    status:"success",
+                    message:"post has been liked",
+                    isLiked: true,
+                }
+                return res.json(resp).status(201);
+            }
+            else{
+                return res.json({
+                    status:"error",
+                    message:"failed to save a like"
+                });
+            }
+        }
+        else if(rows.length == 1){
+            var [insertRes, _] = await db.query(`delete from likes where fk_post_id=? AND fk_user_id=?`, [postId, userId]);
+            if(insertRes.affectedRows == 1){
+                resp = {
+                    status:"success",
+                    message:"post has been disliked",
+                    isLiked: false,
+                }
+                return res.json(resp).status(201);
+            }
+            else{
+                return res.json({
+                    status:"error",
+                    message:"failed to save a like"
+                });
+            }
+        }
+        else{
+            next('something odd happend');
+        }
+
+        res.json(postId);
+    }
+    catch(err){
+        next(err);
+    }
 }); 
 
 /** deletes posts */

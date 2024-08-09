@@ -15,7 +15,15 @@ function addCommentToScreen(data, container){
 
 if(likeButton){
     likeButton.addEventListener('click', async function(ev){  
-        console.log(ev);
+        try{
+            const postId = ev.currentTarget.dataset.postid;
+            var resp = await fetch(`/posts/like/${postId}`, {method: "POST"});
+            var data = await resp.json();
+            console.log();
+        }
+        catch(err){
+            console.error(err);
+        }
     });
 }
 
